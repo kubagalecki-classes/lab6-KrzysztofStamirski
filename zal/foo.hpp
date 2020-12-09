@@ -1,16 +1,27 @@
 #pragma once
 
 #include "Human.hpp"
-
-#include <algorithm>
 #include <list>
 #include <vector>
+#include <iterator>
 
-std::vector< char > foo(std::list< Human >& people)
-{
-    std::vector< char > ret_v(people.size());
+using std::vector;
+using std::list;
+using std::iterator;
 
-    // Twoja implementacja tutaj
-
-    return ret_v;
+vector<char> foo(list<Human> &people){
+	vector<char> v(people.size());
+	list<Human>::iterator it = people.begin();
+	vector<char>::reverse_iterator rit = v.rbegin();
+	for (it; it != people.end(); it++){
+		it->birthday();
+		if (it->isMonster()==true){
+			*ri = 'n';
+		}
+		else{
+			*ri = 'y';
+		}
+		ri++;
+	}
+	return v;
 }
