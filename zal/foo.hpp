@@ -12,7 +12,7 @@ using std::iterator;
 vector<char> foo(list<Human> &people){
 	vector<char> v(people.size());
 	list<Human>::iterator it = people.begin();
-	vector<char>::reverse_iterator rit = v.rbegin();
+	vector<char>::reverse_iterator ri = v.rbegin();
 	for (it; it != people.end(); it++){
 		it->birthday();
 		if (it->isMonster()==true){
